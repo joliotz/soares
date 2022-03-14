@@ -255,7 +255,7 @@ router.get('/carousel2', function(req, res) {
 });
 
 router.get('/carousel3', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/carousel_3.jpg'))
+    res.sendFile(path.join(srcLocation, './view/assets/carousel_3.png'))
 
 });
 
