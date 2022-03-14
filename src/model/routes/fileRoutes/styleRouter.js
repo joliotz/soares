@@ -54,8 +54,8 @@ router.get('/atlatico.css',(req,res)=>{
     res.sendFile(path.join(srcLocation, './view/css/alojamento/rb/atlatico.css'))
 })
 
-router.get('/hv.css',(req,res)=>{
-    res.sendFile(path.join(srcLocation, './view/css/alojamento/pd/hv.css'))
+router.get('/hp.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/alojamento/pd/hp.css'))
 })
 
 router.get('/nordeste.css',(req,res)=>{
