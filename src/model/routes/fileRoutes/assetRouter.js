@@ -338,6 +338,16 @@ router.get('/casaCampoGaleria8', function(req, res) {
 
 });
 
+router.get('/casaDoCampo', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/casadocampo.jpg'))
+
+});
+
+router.get('/culturaAnanas', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/cultura_ananas.jpg'))
+
+});
+
 router.get('/casaMarinaGaleria1', function(req, res) {
     res.sendFile(path.join(srcLocation, './view/assets/casa_marina_galeria1.jpg'))
 
@@ -489,6 +499,11 @@ router.get('/imagemInicial', function(req, res) {
 
 router.get('/palmeirasGaleria1', function(req, res) {
     res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria1.jpg'))
+
+});
+
+router.get('/iniciarSessao', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/iniciar_sessao.png'))
 
 });
 
