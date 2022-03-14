@@ -7,8 +7,15 @@
       background-color: #fff !important;
   }
   
+  .my_bg {
+    background-color: transparent !important;
+  }
+
+  .my_bg-nav {
+    background-color: #1d4638;
+  }
   .bg {
-      background-color: white!important;
+      background-color: white !important;
   }
   
   .history {
@@ -17,7 +24,7 @@
       margin-top: 50px;
       margin-left: 50px;
       margin-right: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 113px;
   }
   
   /*rodape*/
