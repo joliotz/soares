@@ -165,7 +165,7 @@ function fillNews(){
 
 function getNavbar() {
     const nbar = document.getElementById('nbar')
-    fetch('http://localhost:3000/navbar')
+    fetch('http://localhost:3001/navbar')
         .then(res => res.text())
         .then((html) => {
             nbar.innerHTML += html
@@ -177,7 +177,7 @@ function getNavbar() {
 
 function getNavbarLogout() {
     const nbar = document.getElementById('nbarlo')
-    fetch('http://localhost:3000/navbarLogout')
+    fetch('http://localhost:3001/navbarLogout')
         .then(res => res.text())
         .then((html) => {
             nbar.innerHTML += html
@@ -189,7 +189,7 @@ function getNavbarLogout() {
 
 function getFooter() {
     const foot = document.getElementById('foot')
-    fetch('http://localhost:3000/footer')
+    fetch('http://localhost:3001/footer')
         .then(res => res.text())
         .then((html) => {
             foot.innerHTML += html
@@ -200,7 +200,7 @@ function getFooter() {
 }
 
 function insertCardsPontaDelgada() {
-    fetch('http://localhost:3000/cInfoPontaDelgada')
+    fetch('http://localhost:3001/cInfoPontaDelgada')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -209,7 +209,7 @@ function insertCardsPontaDelgada() {
 }
 
 function insertCardsLagoa() {
-    fetch('http://localhost:3000/cInfoLagoa')
+    fetch('http://localhost:3001/cInfoLagoa')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -218,7 +218,7 @@ function insertCardsLagoa() {
 }
 
 function insertCardsNordeste() {
-    fetch('http://localhost:3000/cInfoNordeste')
+    fetch('http://localhost:3001/cInfoNordeste')
         .then(res => res.json())
         .then(data => insertCardInfoNordeste(data))
         .catch(function(err) {
@@ -227,7 +227,7 @@ function insertCardsNordeste() {
 }
 
 function insertCardsPovoacao() {
-    fetch('http://localhost:3000/cInfoPovoacao')
+    fetch('http://localhost:3001/cInfoPovoacao')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -236,7 +236,7 @@ function insertCardsPovoacao() {
 }
 
 function insertCardsRibeiraGrande() {
-    fetch('http://localhost:3000/cInfoRibeiraGrande')
+    fetch('http://localhost:3001/cInfoRibeiraGrande')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -245,7 +245,7 @@ function insertCardsRibeiraGrande() {
 }
 
 function insertCardsVFdoCampo(){
-    fetch('http://localhost:3000/cInfoVFdoCampo')
+    fetch('http://localhost:3001/cInfoVFdoCampo')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -254,7 +254,7 @@ function insertCardsVFdoCampo(){
 }
 
 function insertCardsAtividadesTerra(){
-    fetch('http://localhost:3000/cInfoAtividadesTerra')
+    fetch('http://localhost:3001/cInfoAtividadesTerra')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -264,7 +264,7 @@ function insertCardsAtividadesTerra(){
 
 
 function insertCardsAtividadesMar(){
-    fetch('http://localhost:3000/cInfoAtividadesMar')
+    fetch('http://localhost:3001/cInfoAtividadesMar')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -273,7 +273,7 @@ function insertCardsAtividadesMar(){
 }
 
 function insertCardsAtividadesAr(){
-    fetch('http://localhost:3000/cInfoAtividadesAr')
+    fetch('http://localhost:3001/cInfoAtividadesAr')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -282,7 +282,7 @@ function insertCardsAtividadesAr(){
 }
 
 function insertCardsCentrosdeInterpretacao(){
-    fetch('http://localhost:3000/cInfoCentrosInterpretacao')
+    fetch('http://localhost:3001/cInfoCentrosInterpretacao')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -291,7 +291,7 @@ function insertCardsCentrosdeInterpretacao(){
 }
 
 function insertCardsMuseusCentros(){
-    fetch('http://localhost:3000/cInfoMuseusCentros')
+    fetch('http://localhost:3001/cInfoMuseusCentros')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -300,7 +300,7 @@ function insertCardsMuseusCentros(){
 }
 
 function insertCardsJardinsParques(){
-    fetch('http://localhost:3000/cInfoJardinsParques')
+    fetch('http://localhost:3001/cInfoJardinsParques')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -309,7 +309,7 @@ function insertCardsJardinsParques(){
 }
 
 function insertCardsZonasBalneares(){
-    fetch('http://localhost:3000/cInfoZonasBalneares')
+    fetch('http://localhost:3001/cInfoZonasBalneares')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
