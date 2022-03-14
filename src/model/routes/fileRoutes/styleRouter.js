@@ -14,12 +14,28 @@ router.get('/index.css',(req,res)=>{
     res.sendFile(path.join(srcLocation, './view/css/index.css'))
 })
 
+router.get('/centroInterpretacao.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/centroInterpretação.css'))
+})
+
+router.get('/visitaExplora.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/visitaExplora.css'))
+})
+
 router.get('/style.css',(req,res)=>{
     res.sendFile(path.join(srcLocation, './view/css/style.css'))
 })
 
-router.get('/aboutus.css',(req,res)=>{
-    res.sendFile(path.join(srcLocation, './view/css/aboutus.css'))
+router.get('/jardinsParques.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/jardinsParques.css'))
+})
+
+router.get('/museusCentros.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/museusCentros.css'))
+})
+
+router.get('/historia.css',(req,res)=>{
+    res.sendFile(path.join(srcLocation, './view/css/historia.css'))
 })
 
 router.get('/login.css',(req,res)=>{

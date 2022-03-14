@@ -63,7 +63,7 @@ function renderFooter(){
                                         <div class="col-sm-6 col-md-3 item">
                                             <h3>Serviços</h3>
                                             <ul>
-                                                <li><a href="/index.html">Início</a></li>
+                                                <li><a href="/">Início</a></li>
                                                 <li><a href="/Visita_Explora/visit_explor.html">Visita/Explora</a></li>
                                                 <li><a
                                                         href="/Experiencia_Atividades/experiencia_atividades.html">Experiências/Atividades</a>
@@ -115,8 +115,8 @@ function renderNav(){
                 <div class="d-flex flex-grow-1">
                     <span class="w-100 d-lg-none d-block">
                     </span>
-                    <a class="navbar-brand d-none d-lg-inline-block" href="/index.html"> Visita São Miguel </a>
-                    <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/index.html">
+                    <a class="navbar-brand d-none d-lg-inline-block" href="/"> Visita São Miguel </a>
+                    <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/">
                         <img src="Imagens/favicon-16x16.png" width="45px">
                     </a>
                     <div class="w-100 text-right">
