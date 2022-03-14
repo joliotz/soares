@@ -45,127 +45,9 @@ async function register(){
           
     }      
 }
-
-function fillAdmins(){
-    const options = {
-        method: 'GET',
-        headers: {
-            'authorization': localStorage.getItem("token")
-        }
-    }
-    fetch('http://localhost:3001/api/admin/admins',options)
-    .then((res) =>{
-        if(res.status =200) return res.json()
-        return null
-    })
-    .then((data) => {
-        if(data){
-            for(let i = 0; i< data.length; i++){
-                document.getElementById('listaAdmins').innerHTML += `<tr> <td>${data[i].iduser}</td><td> ${data[i].username}</td> </tr>`
-                
-            }
-        }
-        else location.replace("http://localhost:3001/");
-        })
-    .catch((err)=>{
-        console.log(err)
-        alert('Erro na recolha dos admins!')
-    })
-}
-
-function fillUsers(){
-    const options = {
-        method: 'GET',
-        headers: {
-            'authorization': localStorage.getItem("token")
-        }
-    }
-    fetch('http://localhost:3001/api/admin/users',options)
-    .then((res) =>{
-        if(res.status =200) return res.json()
-        return null
-    })
-    .then((data) => {
-        if(data){
-            for(let i = 0; i< data.length; i++){
-                document.getElementById('listaUsers').innerHTML += `<tr> <td>${data[i].iduser}</td><td> ${data[i].username}</td> </tr>`
-
-            }
-        }
-        else location.replace("http://localhost:3001/");
-        })
-    .catch((err)=>{
-        console.log(err)
-        alert('Erro na recolha dos utilizadores!')
-    })
-}
-
-function validaArtigo(){
-        if(document.getElementById("title").value != "" && document.getElementById("title").value != null &&
-           document.getElementById("text").value != "" && document.getElementById("text").value)
-           return true;
-        else
-            alert("Introduza os dados do artigo corretamente");
-            return false;
-    }
-
-async function articles(){
-    if(validaArtigo()){
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json',
-                'authorization': localStorage.getItem("token")
-            },
-            body: JSON.stringify({
-                title: document.getElementById("title").value,
-                text: document.getElementById("text").value
-            })
-        }
-        await fetch('http://localhost:3001/api/admin/articles', options)
-        .then((res) =>{
-            if(res.status == 200){
-                document.getElementById("title").value = ""
-                document.getElementById("text").value = ""
-            }
-            else{
-                document.getElementById("title").value = ""
-                document.getElementById("text").value = ""
-            }
-    })
-    .catch((error) => console.log(error));
-    }
-}
-function fillNews(){
-    const options = {
-        method: 'GET',
-        headers: {
-            'authorization': localStorage.getItem("token")
-        }
-    }
-    fetch('http://localhost:3001/api/admin/articles',options)
-    .then((res) =>{
-        if(res.status =200) return res.json()
-        return null
-    })
-    .then((data) => {
-        if(data){
-            for(let i = 0; i< data.length; i++){
-                document.getElementById('listaArticles').innerHTML += `<tr> <td>${data[i].idArticle}</td><td> ${data[i].title}</td><td> ${data[i].text}</td> </tr>`
-        
-            }
-        }
-        else location.replace("http://localhost:3001/");
-        })
-    .catch((err)=>{
-        console.log(err)
-        alert('Erro na recolha dos artigos!')
-    })
-}
-
 function getNavbar() {
     const nbar = document.getElementById('nbar')
-    fetch('http://localhost:3000/navbar')
+    fetch('http://localhost:3001/navbar')
         .then(res => res.text())
         .then((html) => {
             nbar.innerHTML += html
@@ -177,7 +59,7 @@ function getNavbar() {
 
 function getNavbarLogout() {
     const nbar = document.getElementById('nbarlo')
-    fetch('http://localhost:3000/navbarLogout')
+    fetch('http://localhost:3001/navbarLogout')
         .then(res => res.text())
         .then((html) => {
             nbar.innerHTML += html
@@ -189,7 +71,7 @@ function getNavbarLogout() {
 
 function getFooter() {
     const foot = document.getElementById('foot')
-    fetch('http://localhost:3000/footer')
+    fetch('http://localhost:3001/footer')
         .then(res => res.text())
         .then((html) => {
             foot.innerHTML += html
@@ -200,7 +82,7 @@ function getFooter() {
 }
 
 function insertCardsPontaDelgada() {
-    fetch('http://localhost:3000/cInfoPontaDelgada')
+    fetch('http://localhost:3001/cInfoPontaDelgada')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -209,7 +91,7 @@ function insertCardsPontaDelgada() {
 }
 
 function insertCardsLagoa() {
-    fetch('http://localhost:3000/cInfoLagoa')
+    fetch('http://localhost:3001/cInfoLagoa')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -218,7 +100,7 @@ function insertCardsLagoa() {
 }
 
 function insertCardsNordeste() {
-    fetch('http://localhost:3000/cInfoNordeste')
+    fetch('http://localhost:3001/cInfoNordeste')
         .then(res => res.json())
         .then(data => insertCardInfoNordeste(data))
         .catch(function(err) {
@@ -227,7 +109,7 @@ function insertCardsNordeste() {
 }
 
 function insertCardsPovoacao() {
-    fetch('http://localhost:3000/cInfoPovoacao')
+    fetch('http://localhost:3001/cInfoPovoacao')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -236,7 +118,7 @@ function insertCardsPovoacao() {
 }
 
 function insertCardsRibeiraGrande() {
-    fetch('http://localhost:3000/cInfoRibeiraGrande')
+    fetch('http://localhost:3001/cInfoRibeiraGrande')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -245,7 +127,7 @@ function insertCardsRibeiraGrande() {
 }
 
 function insertCardsVFdoCampo(){
-    fetch('http://localhost:3000/cInfoVFdoCampo')
+    fetch('http://localhost:3001/cInfoVFdoCampo')
         .then(res => res.json())
         .then(data => insertCardInfoResto(data))
         .catch(function(err) {
@@ -254,7 +136,7 @@ function insertCardsVFdoCampo(){
 }
 
 function insertCardsAtividadesTerra(){
-    fetch('http://localhost:3000/cInfoAtividadesTerra')
+    fetch('http://localhost:3001/cInfoAtividadesTerra')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -264,7 +146,7 @@ function insertCardsAtividadesTerra(){
 
 
 function insertCardsAtividadesMar(){
-    fetch('http://localhost:3000/cInfoAtividadesMar')
+    fetch('http://localhost:3001/cInfoAtividadesMar')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -273,7 +155,7 @@ function insertCardsAtividadesMar(){
 }
 
 function insertCardsAtividadesAr(){
-    fetch('http://localhost:3000/cInfoAtividadesAr')
+    fetch('http://localhost:3001/cInfoAtividadesAr')
     .then(res => res.json())
     .then(data => insertCardInfoAtividades(data))
     .catch(function(err){
@@ -282,7 +164,7 @@ function insertCardsAtividadesAr(){
 }
 
 function insertCardsCentrosdeInterpretacao(){
-    fetch('http://localhost:3000/cInfoCentrosInterpretacao')
+    fetch("http://localhost:3001/cInfoCentrosInterpretacao")
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -291,7 +173,7 @@ function insertCardsCentrosdeInterpretacao(){
 }
 
 function insertCardsMuseusCentros(){
-    fetch('http://localhost:3000/cInfoMuseusCentros')
+    fetch('http://localhost:3001/cInfoMuseusCentros')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -300,7 +182,7 @@ function insertCardsMuseusCentros(){
 }
 
 function insertCardsJardinsParques(){
-    fetch('http://localhost:3000/cInfoJardinsParques')
+    fetch('http://localhost:3001/cInfoJardinsParques')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){
@@ -309,7 +191,7 @@ function insertCardsJardinsParques(){
 }
 
 function insertCardsZonasBalneares(){
-    fetch('http://localhost:3000/cInfoZonasBalneares')
+    fetch('http://localhost:3001/cInfoZonasBalneares')
     .then(res => res.json())
     .then(data => insertCardInfoResto(data))
     .catch(function(err){

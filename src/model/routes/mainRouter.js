@@ -1,11 +1,8 @@
 const srcLocation = require('../../srcLocation');
-
+const connection = require('../dbconnection')
 const path = require('path');
 const express = require('express');
-
 const router = express.Router();
-
-const userAuthentication = require("../userAuthentication");
 
 router.use('/files', require('./fileRouter'));
 
@@ -285,5 +282,148 @@ router.get('/quintaPalmeiras', function(req, res) {
 router.get('/valeEncantos', function(req, res) {
     res.sendFile(path.join(srcLocation, './view/html/hotel/vilaPovoacao/valeEncantos.html'));
 });
+
+router.get('/cInfoPontaDelgada', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoLagoa', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoNordeste', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 4;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoPovoacao', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 5;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoRibeiraGrande', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 6;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoVFdoCampo', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription  FROM accomodation_cards WHERE accomodationID = 7;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoAtividadesTerra', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoAtividadesMar', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 2;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoAtividadesAr', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM activity_cards WHERE activitiesID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoCentrosInterpretacao', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 1;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoMuseusCentros', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 2;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoJardinsParques', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 3;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
+
+router.get('/cInfoZonasBalneares', function(req, res) {
+    connection.query('SELECT cardImage, cardTitle, cardDescription FROM visit_explore_cards WHERE visit_exploreID = 4;', function(err, result) {
+        if (err) {
+            console.log('Erro: ' + err)
+            throw err;
+        } else { //formato json
+            res.json(result)
+        }
+    })
+})
 
 module.exports = router
