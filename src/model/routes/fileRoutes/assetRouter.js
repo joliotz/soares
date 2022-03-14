@@ -497,39 +497,32 @@ router.get('/palmeirasGaleria2', function(req, res) {
 
 });
 
-router.get('/palmeirasGaleria3', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria3.jpg'))
-
+router.get('/palmeiras', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/palmeiras.jpg'))
 });
 
-router.get('/palmeirasGaleria4', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria4.jpg'))
-
+router.get('/parapente', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/parapente.jpg'))
 });
 
-router.get('/palmeirasGaleria5', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria5.jpg'))
-
+router.get('/passeiobike', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/passeio_bike.jpg'))
 });
 
-router.get('/palmeirasGaleria6', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria6.jpg'))
-
+router.get('/passeiocavalo', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/passeio_cavalo.jpg'))
 });
 
-router.get('/palmeirasGaleria7', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria7.jpg'))
-
+router.get('/pastorGaleria1', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/pastor_galeria1.jpg'))
 });
 
-router.get('/palmeirasGaleria8', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/palmeiras_galeria8.jpg'))
-
+router.get('/pastorGaleria2', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/pastor_galeria2.jpg'))
 });
 
-router.get('/iniciarSessao', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/iniciar_sessao.png'))
-
+router.get('/pastorGaleria3', function(req, res) {
+    res.sendFile(path.join(srcLocation, './view/assets/pastor_galeria3.jpg'))
 });
 
 /*OLA FEIJO */
