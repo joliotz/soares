@@ -4,10 +4,6 @@ const path = require('path');
 const express = require('express');
 const router = express.Router();
 
-<<<<<<< HEAD
-router.get('/login-02', function(req, res) {
-    res.sendFile(path.join(srcLocation, './view/assets/login-02.png'))
-=======
 router.get('/scripts.js',(req, res) =>{
     res.sendFile(path.join(srcLocation, './controller/scripts.js'))
 });
@@ -515,7 +511,6 @@ router.get('/passeiobike', function(req, res) {
 
 router.get('/passeiocavalo', function(req, res) {
     res.sendFile(path.join(srcLocation, './view/assets/passeio_cavalo.jpg'))
->>>>>>> 2ff2494922bc3da075954aba22108bdb2aa6f41f
 });
 
 router.get('/pastorGaleria1', function(req, res) {
